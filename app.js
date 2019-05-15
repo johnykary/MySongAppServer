@@ -30,14 +30,6 @@ app.get('/', (req,res) =>{
           artistsArray.push(file);
      })
     
-    // for(i=0; i<artistsArray.length; i++){
-    //      fs.readdirSync(pathSongs + artistsArray[i]).forEach(file => {
-    //       data.artists.push({artistname :  artistsArray[i],
-    //                         songname: file.replace('.mp3',''),
-    //                         songpath : artistsArray[i] + "/" + file
-    //                         })
-    //     })
-    // }
     for(i=0; i<artistsArray.length; i++){
         fs.readdirSync(pathSongs + artistsArray[i]).forEach(album =>{
             fs.readdirSync(pathSongs + artistsArray[i] +'/' + album).forEach(song =>{
